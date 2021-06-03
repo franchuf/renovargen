@@ -1,0 +1,11 @@
+.carrusel{
+    width: 500px;
+    
+    border: solid 10px;
+}
+.elemento {
+    background-color: tomato;
+    color: white;
+    width: 20px;
+    
+}

@@ -1,0 +1,19 @@
+{
+  "name": "renovargen",
+  "version": "1.0.0",
+  "description": "Proyect renovargen maintenance equipments",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franchuf/renovargen.git"
+  },
+  "author": "Francisco Faner <franchuf@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franchuf/renovargen/issues"
+  },
+  "homepage": "https://github.com/franchuf/renovargen#readme"
+}

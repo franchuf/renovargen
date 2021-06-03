@@ -1,0 +1,46 @@
+.logotras2{
+    width: 150px;
+}
+.tel{
+    
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+
+.pizarra {
+    background: rgba(68, 68, 68, 0.4);
+    width: 100%;    
+    position: absolute;
+    text-align: center;
+    top: 25%;   
+    
+}
+h1{
+    font-size:1vw
+}
+p {
+    color: white;
+    font-size: 3vw;
+    top: 10%;   
+    width: 100%;
+    opacity: 100%; 
+}
+.textoPizarra {
+    
+    color:white;
+    font-size: 2rem;
+    top: 10%;   
+    width: 100%;
+    opacity: 100%; 
+}
+
+.imagenCarrusel {
+    width: 100%;
+    
+}
+.carrusel{
+    position: relative;
+    text-align: center;
+}   
