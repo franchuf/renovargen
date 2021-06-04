@@ -49,6 +49,4 @@ addCommentsEquipment('05073',"comentarios222");
 addCommentsEquipment('05073',"comentarios333");
 addCommentsEquipment('05073',"comentarios444");
 addCommentsEquipment('05073',"comentarios555");
-
-console.log(db['05073'].comentarios);
-
+console.log(db['05073']);
