@@ -50,3 +50,15 @@ addCommentsEquipment('05073',"comentarios333");
 addCommentsEquipment('05073',"comentarios444");
 addCommentsEquipment('05073',"comentarios555");
 console.log(db['05073']);
+
+
+class Vehiculo  {
+    constructor() { //metodo para inicializar una clase
+        this.km = km; //se asignan las variables que estarán en un scope global
+        this.inv = inv;
+        this.hours = hours;
+    }
+}
+
+
+
