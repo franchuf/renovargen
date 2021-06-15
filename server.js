@@ -3,6 +3,10 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+app.get("/registro.html", function (req, res){
+  res.sendFile(__dirname + "/registro.html")
+  console.log ("fine!")
+})
 app.get("/", function (req, res) {
   var day = "";
   var today = new Date();
