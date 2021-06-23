@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Registro inventario</title>
 </head>
 <body> 
@@ -11,6 +12,43 @@
     <form action="/registro" method="post">
         <input type="text" name="inventario">
         <input type="text" name="hs">
+=======
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <!-- <form action="/" method="post">
+        <div class="form-floating mx-auto">
+            <label for="maquinas">Ingresar numero de maquina</label>
+        <input class="form-control" type="text" name="inventario" id="maquinas">
+        </div>
+
+        <div class="form-floating mb-3 ">
+            <label for="horas">Horas de trabajo</label>
+        <input class="form-control" type="text" name="hs" id="horas">
+        </div>
+
+>>>>>>> f5de9f03c3700e0ab9ca50946da715c2c221fabc
         <button type="submit" name= "send">enviar</button>
+    </form> -->
+
+    <div class="container-fluid" style="width: 60%;">
+    <form action="/" method="post">
+    <div class="form-floating mb-4" style="margin-top: 10%;">
+        <input type="text" class="form-control" name="inventario" placeholder="Leave a comment here">
+        <label for="inventario">Numero de inventario</label>
+      </div>
+      <div class="form-floating mb-4" style="margin-top: 10%;">
+        <input type="text" class="form-control" name="hs" placeholder="Leave a comment here">
+        <label for="hs">Horometro</label>
+      </div>
+      <button class= "btn btn-secondary btn-lg" style="margin-top: 10%;" type="submit" name= "send">enviar</button>
+    </form>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

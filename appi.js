@@ -15,6 +15,7 @@ class Equipo  {
     }
 }
 
+
 const agregarEquipo = (equipo) => {
     db[equipo.id]= equipo
     return equipo
@@ -37,12 +38,16 @@ const removerEquipo = (equipoId) => {
    // return equipoId
 }
 
-//para exportar las funciones:
-//exports.modificarHsEquipo = modificarHsEquipo;
-
 
 agregarEquipo(new Equipo ('05078', 2345));
 agregarEquipo(new Equipo ('05073', 2345, ['algun otro comentario']))
+
+//para exportar las funciones:
+exports.agregarEquipo = agregarEquipo();
+exports.modificarHsEquipo = modificarHsEquipo();
+exports.db = db;
+
+
 
 
 
@@ -65,6 +70,3 @@ class Vehiculo  {
         this.hours = hours;
     }
 }
-
-exports.modificarHsEquipo = modificarHsEquipo();
-
