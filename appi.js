@@ -15,6 +15,7 @@ class Equipo  {
     }
 }
 
+
 const agregarEquipo = (equipo) => {
     db[equipo.id]= equipo
     return equipo
@@ -37,19 +38,29 @@ const removerEquipo = (equipoId) => {
    // return equipoId
 }
 
+
 agregarEquipo(new Equipo ('05078', 2345));
 agregarEquipo(new Equipo ('05073', 2345, ['algun otro comentario']))
 
-console.log(db)
-console.log(db['05078'])
-modificarHsEquipo('05078',3333);
-console.log(db['05078']);
-console.log(db['05073'].comentarios);
-addCommentsEquipment('05073',"comentarios222");
-addCommentsEquipment('05073',"comentarios333");
-addCommentsEquipment('05073',"comentarios444");
-addCommentsEquipment('05073',"comentarios555");
-console.log(db['05073']);
+//para exportar las funciones:
+exports.agregarEquipo = agregarEquipo();
+exports.modificarHsEquipo = modificarHsEquipo();
+exports.db = db;
+
+
+
+
+
+// console.log(db)
+// console.log(db['05078'])
+// modificarHsEquipo('05078',3333);
+// console.log(db['05078']);
+// console.log(db['05073'].comentarios);
+// addCommentsEquipment('05073',"comentarios222");
+// addCommentsEquipment('05073',"comentarios333");
+// addCommentsEquipment('05073',"comentarios444");
+// addCommentsEquipment('05073',"comentarios555");
+// console.log(db['05073']);
 
 
 class Vehiculo  {
@@ -59,6 +70,3 @@ class Vehiculo  {
         this.hours = hours;
     }
 }
-
-
-

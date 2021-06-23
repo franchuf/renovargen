@@ -1,41 +1,55 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+//const appi = require("./appi");
 const app = express();
-app.use(bodyParser.urlencoded({extended: true}));
-app.set("view engine", "ejs");
-app.get("/registro.html", function (req, res){
-  res.sendFile(__dirname + "/registro.html")
-  console.log ("fine!")
-})
-app.get("/", function (req, res) {
-  var day = "";
-  var today = new Date();
-  console.log(today);
-  if (today.getDay() === 0) {
-    day = "sunday";
-  } else if (today.getDay() === 1) {
-    day = "monday";
-  } else if (today.getDay() === 2) {
-    day = "tuesday";
-  } else if (today.getDay() === 3) {
-    day = "wesnesday";
-  } else if (today.getDay() === 4) {
-    day = "thursday";
-  } else if (today.getDay() === 5) {
-    day = "friday";
-  } else {
-    day = "saturday";
-  }
-  res.render("week", { day: day });
-  console.log(today.getDay());
+app.use(bodyParser.urlencoded({ extended: true }));
+var db={}
+app.get("/registro", function (req, res) {
+  res.sendFile(__dirname + "/registro.html");
+  console.log("envio registro.html");
+});
+app.post("/registro", function (req, res) {
+  var inv = req.body.inventario;
+  var horas = Number(req.body.hs);
+  console.log(req.body);
 
+  //codigo de la app
+
+  //constructor del equipo
+  class Equipo  {
+    constructor (id, hs = 0, comentarios){
+        this.id = id;
+        this.hs = hs;
+        this.comentarios = Array.isArray(comentarios) ? comentarios : [];
+    }
+  }
+
+  const agregarEquipo = (equipo) => {
+    db[equipo.id] = equipo;
+    return equipo;
+  };
+  //crea un equipo
+  agregarEquipo(new Equipo("05078", 1));
+  //funcion suma hs del equipo
+  const modificarHsEquipo = (equipoId, hours) => {
+    if (db[equipoId].hs >= hours) {
+      return "error";
+    }
+    db[equipoId].hs = hours;
+    return db[equipoId];
+  };
+  modificarHsEquipo(inv, horas);
+  res.write(
+    "la maquina es el numero de inventario " +
+      inv +
+      "y la cantidad de horas" +
+      horas
+  );
+  //res.write("el equipo inventario " + inv + " tiene " + horas + " horas")
+  res.write("ahora si la puta madre");
+  res.end("");
 });
 
-app.post("/", function(req,res){
-  var item = req.body.newItem;
-  console.log (item);
-})
-
-app.listen(3000, function () {
+app.listen(5040, function () {
   console.log("server started on port 3000");
 });
